@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Transformasi Gambar Cepat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Aplikasi Transformasi Gambar Cepat</h1>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Unggah Gambar</h2>
+            <input type="file" id="file-upload" accept="image/jpeg, image/png">
+        </section>
+        <section class="transform-section">
+            <h2>Pilih Jenis Transformasi</h2>
+            <form id="transform-form">
+                <label for="transform-type">Transformasi:</label>
+                <select id="transform-type">
+                    <option value="translasi">Translasi</option>
+                    <option value="rotasi">Rotasi</option>
+                    <option value="skala">Skala</option>
+                    <option value="distorsi">Distorsi</option>
+                </select>
+                <div id="transform-options"></div>
+                <button type="submit">Transformasi</button>
+            </form>
+        </section>
+        <section class="result-section">
+            <h2>Hasil Transformasi</h2>
+            <div id="original-image"></div>
+            <div id="transformed-image"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Aplikasi Transformasi Gambar Cepat</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
